@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BE Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/form.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 content image-class">
+                <div class="landing-content">
+                    
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12 content">
+                <div style="width:70%;margin:75px auto">
+                    <h2><b>Multi Modal Medical Image Fusion To Detect Brain Tumors</b></h2>
+                    
+                    <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="mri">Select MRI Image :</label>
+                            <input type="file" name="mri" id="mri" accept="image/*" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ct">Select CT Image :</label>
+                            <input type="file" name="ct" id="ct" accept="image/*" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="points">Enter Number of Points for Registration (Min 5, Max 10) :</label>
+                            <input type="number" name="points" min="5" max="10" class="form-control" required>
+                        </div>
+
+                        <input type="submit" value="Upload Files" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
